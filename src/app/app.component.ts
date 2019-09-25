@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+      import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'AirbusShopFront';
-}
+      @Component({
+        selector: 'app-root',
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css']
+      })
+      export class AppComponent implements OnInit{
+        private categories;
+
+        constructor(private catService:CatalogueService){}
+
+          ngOnInit(): void {
+            this.getCategories();
+          }
+
+
+          private getCategories() {
+          this.catService.getResource("/categories")
+          .subscribe(data=>{
+          this.categories=data;
+          },err=>{
+          console.log(err);
+          })
+        }
+      }
+
