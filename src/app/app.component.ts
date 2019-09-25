@@ -1,31 +1,66 @@
-import { Component } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {CatalogueService} from './services/catalogue.service';
+import {Router} from '@angular/router';
+import {CaddyService} from './services/caddy.service';
+import {AuthenticationService} from './services/authentication.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+selector: 'app-root',
+templateUrl: './app.component.html',
+styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'AirbusShopFront';
-  category: any
-  private categories;
-  private currentCategorie;
-  constructor(private _httpClient: HttpClient,private route: ActivatedRoute,private router: Router) {
+export class AppComponent implements OnInit{
+categories;
+currentCategorie;
+
+constructor(public catService:CatalogueService,
+              private  router:Router,
+              public caddyService:CaddyService,
+              public authService:AuthenticationService){}
+
+  ngOnInit(): void {
+    this.getCategories();
+    this.authService.loadUser();
+    if(this.authService.isAuthenticated())
+     this.caddyService.loadCaddyFromLocalStorage();
   }
-  ngOnInit(){
-    this._httpClient.get('http://10.0.4.85:8080/categories').subscribe((res: any) => {
-      this.category = res._embedded.categories;
-      console.log(this.category)
-    })
+
+  private getCategories() {
+    this.catService.getResource(this.catService.host+"/categories")
+      .subscribe(data=>{
+        this.categories=data;
+      },err=>{
+        console.log(err);
+      })
   }
-  getProductsByCat(c){
-    this.currentCategorie = c
-    this.router.navigateByUrl('/products/2/'+c.id)
+
+  getProductsByCat(c) {
+    this.currentCategorie=c;
+    this.router.navigateByUrl('/products/2/'+c.id);
   }
-  onselectedProducts(){
-    this.currentCategorie = undefined
-    this.router.navigateByUrl("/products/1/0")
+
+  onSelectedProducts() {
+    this.currentCategorie=undefined;
+    this.router.navigateByUrl("/products/1/0");
+  }
+
+  onProductsPromo() {
+    this.currentCategorie=undefined;
+    this.router.navigateByUrl("/products/3/0");
+  }
+
+  onProductsDispo() {
+    this.currentCategorie=undefined;
+    this.router.navigateByUrl("/products/4/0");
+  }
+
+  onLogin() {
+    this.router.navigateByUrl('/login');
+  }
+
+  onLogout() {
+    this.caddyService.emptyCaddy();
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
   }
 }

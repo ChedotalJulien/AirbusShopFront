@@ -1,12 +1,35 @@
+/* body css */
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* navbar css */
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #4682B4;
   color: white;
   text-align: center;
 }
+
+a {
+color: white;
+}
+
+/* footer css */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: primary;
+  color: white;
+  text-align: center;
+}
+
 .clickable{
   cursor: pointer;
 }
+
+
