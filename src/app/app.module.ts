@@ -9,8 +9,9 @@ import { Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 
 const appRoutes: Routes = [
-  { path: 'product', component: ProductsComponent,
-  },
+  { path: 'products/:p1/:p2', component: ProductsComponent},
+  {path: '', redirectTo: 'products/1/0', pathMatch: 'full'}
+  ,
 ];
 @NgModule({
   declarations: [

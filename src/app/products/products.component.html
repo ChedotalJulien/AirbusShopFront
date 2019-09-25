@@ -1,21 +1,26 @@
-<div class="container">
-  <div class="col-md-3">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let book of response"><a >{{ book.name }}</a></li>
-    </ul>
-  </div>
-</div>
 <div>
   <div *ngFor="let p of products">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <div class="panel panel-default">
         <div class="panel panel-heading">{{p.name}}</div>
         <div class="panel-body">
           <table>
             <tr>
-              <td>
-                <img src="{{'http://10.0.4.85:8080/photoProduct/'+p.id}}">
+              <td rowspan="3">
+                <img class="imgProduct"  src="{{'http://10.0.4.85:8080/photoProduct/'+p.id}}">
               </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>{{p.description}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>{{p.currentprice | number:'0.2'}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
             </tr>
           </table>
         </div>

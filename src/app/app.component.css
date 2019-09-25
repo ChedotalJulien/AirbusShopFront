@@ -7,3 +7,6 @@
   color: white;
   text-align: center;
 }
+.clickable{
+  cursor: pointer;
+}

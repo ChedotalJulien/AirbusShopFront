@@ -4,12 +4,12 @@
       <a class="navbar-brand" href="#">Airbus Shop</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a routerLink="/">Acceuil</a></li>
+      <li class="active"><a (click)="onselectedProducts()" routerLink="/">Acceuil</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nos Produits
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a routerLink="/product">Chercher</a></li>
+          <li><a routerLink="/products">Chercher</a></li>
           <li><a routerLink="/new-product">Ajouter</a></li>
 
         </ul>
@@ -25,7 +25,16 @@
     </form>
   </div>
 </nav>
-
+<div class="container">
+  <div class="col-md-3">
+    <ul class="list-group">
+      <li [ngClass]="currentCategorie==book?'active':''" (click)="getProductsByCat(book)" class="list-group-item clickable" *ngFor="let book of category">{{ book.name }}</li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
 
 <div class="footer">
   <p>|| Create & Dream Enterprise 2019 ||</p>
