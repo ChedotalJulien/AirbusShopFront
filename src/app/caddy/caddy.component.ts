@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CaddyService } from './caddy.service';
+import { CaddyService } from './app/services/caddy.service';
 
     @Component({
       selector: 'app-caddy',

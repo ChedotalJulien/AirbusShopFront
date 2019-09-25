@@ -6,7 +6,9 @@ import { CaddyComponent } from './caddy/caddy.component';
 
 
 
-  const routes: Routes = [];
+  const routes: Routes = [
+    {path:'products',components:ProductsComponent}
+  ];
 
     @NgModule({
 
