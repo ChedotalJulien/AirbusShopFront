@@ -1,3 +1,4 @@
+/* exporting interface */
 export interface Category{
   id:string;
 name:string;
@@ -15,3 +16,5 @@ href:string;
 }
 }
 }
+
+// END //

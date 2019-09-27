@@ -1,3 +1,4 @@
+    /* importing components */
     import { Component, OnInit } from '@angular/core';
     import {Client} from '../model/client.model';
     import {OrderService} from '../services/order.service';
@@ -10,9 +11,13 @@
     templateUrl: './client.component.html',
     styleUrls: ['./client.component.css']
     })
+
+    /* importing Class */
     export class ClientComponent implements OnInit {
     public mode:number=0;
     panelStyle:string= "panel-default";
+
+    /* Constructor */
     constructor(public orderService:OrderService,
                   private authService:AuthenticationService,
                   public caddyService:CaddyService,
@@ -43,3 +48,4 @@
         this.router.navigateByUrl("/payment/"+this.orderService.order.id);
       }
     }
+// END //

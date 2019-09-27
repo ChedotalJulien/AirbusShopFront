@@ -1,3 +1,5 @@
+/* importing components */
+
 import {ItemProduct} from '../model/item-product.model';
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product.model';
@@ -7,10 +9,14 @@ import {Client} from '../model/client.model';
 @Injectable({
 providedIn: 'root'
 })
+
+/* import Class */
 export  class CaddyService{
-public currentCaddyName:string="Caddy1";
+public currentCaddyName:string="Caddy";
 public listCaddies:Array<{num:number,name:string}>=[{num:1,name:'Caddy1'}];
 public caddies:Map<string,Caddy>=new Map();
+
+/* Constructor */
 constructor(private authService:AuthenticationService){
      if(this.authService.isAuthenticated()) {
        this.loadCaddyFromLocalStorage();
@@ -89,3 +95,5 @@ constructor(private authService:AuthenticationService){
     this.saveCaddy();
   }
 }
+
+// END //

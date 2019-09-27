@@ -1,3 +1,5 @@
+/* export interface */
+
     export interface Product{
       id:number;
     name:string;
@@ -21,3 +23,5 @@
     }
 
     }
+
+// END //

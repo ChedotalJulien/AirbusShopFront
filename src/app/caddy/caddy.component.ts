@@ -1,3 +1,4 @@
+/* importing components */
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../model/product.model';
 import {Router} from '@angular/router';
@@ -12,10 +13,13 @@ selector: 'app-caddy',
 templateUrl: './caddy.component.html',
 styleUrls: ['./caddy.component.css']
 })
+
+/* importing Class */
 export class CaddyComponent implements OnInit {
 
 public caddy:Caddy;
 
+/* Constructor */
 constructor(private catService:CatalogueService, private router:Router,
               private caddyService:CaddyService, private authService:AuthenticationService) { }
 
@@ -52,3 +56,4 @@ constructor(private catService:CatalogueService, private router:Router,
     this.caddy=this.caddyService.getCaddy();
   }
 }
+// END //

@@ -1,3 +1,4 @@
+/* importing components */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,7 @@ import { ClientComponent } from './client/client.component';
 import { ProductComponent } from './product/product.component';
 import { PaymentComponent } from './payment/payment.component';
 
+/* importing Module of your components */
 @NgModule({
 declarations: [
 AppComponent,
@@ -22,6 +24,8 @@ ClientComponent,
 ProductComponent,
 PaymentComponent,
 ],
+
+/* importing road */
 imports: [
 BrowserModule,
 AppRoutingModule, HttpClientModule,FormsModule,
@@ -29,5 +33,8 @@ AppRoutingModule, HttpClientModule,FormsModule,
 providers: [],
 bootstrap: [AppComponent]
 })
+
+/* exporting Class */
 export class AppModule { }
 
+// END //

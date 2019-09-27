@@ -23,13 +23,19 @@ color: white;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: primary;
+  background: rgb(2,0,41);
+  background: linear-gradient(90deg, rgba(2,0,41,1) 0%, rgba(77,131,148,1) 53%, rgba(0,129,156,1) 100%);
   color: white;
   text-align: center;
 }
 
 .clickable{
   cursor: pointer;
+}
+
+.container-fluid{
+  background: rgb(2,0,41);
+  background: linear-gradient(90deg, rgba(2,0,41,1) 0%, rgba(77,131,148,1) 53%, rgba(0,129,156,1) 100%);
 }
 
 

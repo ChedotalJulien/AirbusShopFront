@@ -1,3 +1,4 @@
+/* importing components */
 import {Component, OnInit} from '@angular/core';
 import {CatalogueService} from './services/catalogue.service';
 import {Router} from '@angular/router';
@@ -9,10 +10,13 @@ selector: 'app-root',
 templateUrl: './app.component.html',
 styleUrls: ['./app.component.css']
 })
+
+/* importing Class */
 export class AppComponent implements OnInit{
 categories;
 currentCategorie;
 
+/* Constructor */
 constructor(public catService:CatalogueService,
               private  router:Router,
               public caddyService:CaddyService,
@@ -64,3 +68,4 @@ constructor(public catService:CatalogueService,
     this.router.navigateByUrl('/login');
   }
 }
+// END //

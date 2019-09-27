@@ -1,3 +1,4 @@
+/* importing components */
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CatalogueService} from '../services/catalogue.service';
@@ -11,7 +12,7 @@ selector: 'app-product',
 templateUrl: './product.component.html',
 styleUrls: ['./product.component.css']
 })
-
+/* importing Class */
 export class ProductComponent implements OnInit {
 currentProduct;
 selectedFiles;
@@ -20,7 +21,7 @@ currentFileUpload: any;
 private currentTime: number;
 private editPhoto: boolean;
 private mode: number=0;
-
+/* Constructor */
 constructor(private router:Router, private route:ActivatedRoute,
               public catalService:CatalogueService,
               public authService:AuthenticationService,
@@ -99,3 +100,4 @@ constructor(private router:Router, private route:ActivatedRoute,
       })
   }
 }
+// END //

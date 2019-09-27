@@ -1,3 +1,5 @@
+/* importing components */
+
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpEvent, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
@@ -6,9 +8,12 @@ import {Order} from '../model/Order.model';
 @Injectable({
 providedIn: 'root'
 })
-export class CatalogueService {
-public host:string="http://10.0.4.85:8080";
 
+/* import Class */
+export class CatalogueService {
+public host:string="http://localhost:8080";
+
+/* Constructor */
 constructor(private http:HttpClient) {
   }
 
@@ -32,3 +37,5 @@ constructor(private http:HttpClient) {
 
 
 }
+
+// END //

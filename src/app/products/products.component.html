@@ -1,3 +1,5 @@
+<!-- here is the view of our component -->
+
 <div *ngIf="products">
   <div><h3>{{title}}</h3></div>
   <div *ngFor="let p of products._embedded.products">
@@ -20,7 +22,7 @@
             {{p.description}}
           </div>
           <div>
-            <label>Price : {{p.currentPrice|number:'0.00'}}</label>
+            <label>Price : {{p.price|number:'0.00'}}</label>
           </div>
           <div>
         <span *ngIf="p.promotion">
@@ -35,8 +37,8 @@
           </div>
           <div>
             <form #f="ngForm" (ngSubmit)="onAddProductToCaddy(p)">
-              <label class="control-label">Quantité :</label>
-              <input type="number" name="quantity" [(ngModel)]="p.quantity" ngModel style="width: 40px">
+              <label class="control-label">Quantities :</label>
+              <input type="number" name="quantity" [(ngModel)]="p.quantity" ngModel style="width: 50px">
               <button>
                 <img src="assets/images/caddy.png">
               </button>
@@ -50,3 +52,4 @@
     </div>
   </div>
 </div>
+<!-- END -->

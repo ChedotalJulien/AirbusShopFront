@@ -1,3 +1,4 @@
+/* importing components */
 import { Component, OnInit } from '@angular/core';
 import {CatalogueService} from '../services/catalogue.service';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
@@ -11,6 +12,7 @@ selector: 'app-products',
 templateUrl: './products.component.html',
 styleUrls: ['./products.component.css']
 })
+/* importing Class */
 export class ProductsComponent implements OnInit {
 products;
 editPhoto: boolean;
@@ -21,7 +23,7 @@ currentFileUpload: any;
 title:string;
 currentRequest:string;
 private currentTime: number=0;
-
+/* Constructor */
 constructor(
     public catService:CatalogueService,
     private route:ActivatedRoute,private router:Router,
@@ -40,12 +42,12 @@ constructor(
         }
         else if (p1==2){
           let idCat=this.route.snapshot.params.p2;
-          this.title="Produits de la catégorie "+idCat;
+          this.title="Categories products "+idCat;
           this.currentRequest='/categories/'+idCat+'/product';
           this.getProducts(this.currentRequest);
         }
         else if (p1==3){
-          this.title="Produits en promotion";
+          this.title="promotion product";
           this.currentRequest='/products/search/promoProducts';
           this.getProducts(this.currentRequest);
         }
@@ -135,3 +137,4 @@ constructor(
     this.router.navigateByUrl("/product/"+p.id);
   }
 }
+// END //

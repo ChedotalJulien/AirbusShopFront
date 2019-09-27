@@ -1,3 +1,5 @@
+/* importing components */
+
 import {Client} from '../model/client.model';
 import {ItemProduct} from '../model/item-product.model';
 import {Injectable} from '@angular/core';
@@ -10,9 +12,12 @@ import {Observable} from 'rxjs';
 @Injectable({
 providedIn:'root'
 })
+
+/* import Class */
 export class OrderService {
 public order:Order=new Order();
 
+/* Constructor */
 constructor(private caddyService:CaddyService,
               private httpClient:HttpClient,
               private catalService:CatalogueService){}
@@ -42,3 +47,5 @@ constructor(private caddyService:CaddyService,
     return this.httpClient.get<Order>(this.catalService.host+"/orders/"+id);
   }
 }
+
+// END //

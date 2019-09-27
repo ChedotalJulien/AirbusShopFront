@@ -1,3 +1,5 @@
+/* importing components */
+
     import { Injectable } from '@angular/core';
     import {HttpClient, HttpEvent, HttpRequest} from '@angular/common/http';
     import {Observable} from 'rxjs';
@@ -6,8 +8,10 @@
     @Injectable({
     providedIn: 'root'
     })
+
+    /* importing Class */
     export class AuthenticationService {
-    public host:string="http://10.0.4.85:8080";
+    public host:string="http://localhost:8080";
     public authenticated: boolean;
     public authenticatedUser;
     private users=[
@@ -16,6 +20,7 @@
     {username:"user2", password:"1234",roles:['USER']},
     ]
 
+    /* Constructor */
     constructor(private http:HttpClient) {
       }
 
@@ -61,3 +66,5 @@
       }
 
     }
+
+// END //

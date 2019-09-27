@@ -1,3 +1,5 @@
+<!-- here is the view of our component -->
+
 <div *ngIf="currentProduct">
   <div class="panel panel-default" *ngIf="mode==0">
     <div class="panel-heading">Fiche Produit : {{currentProduct.name}}
@@ -32,7 +34,7 @@
         </div>
         <div>
           <form #f="ngForm" (ngSubmit)="onAddProductToCaddy(currentProduct)">
-            <label class="control-label">Quantité :</label>
+            <label class="control-label">Quantities :</label>
             <input type="number" name="quantity" [(ngModel)]="currentProduct.quantity" ngModel style="width: 40px">
             <button>
               <img src="assets/images/caddy.png">
@@ -83,3 +85,4 @@
     </form>
   </div>
 </div>
+<!-- END -->

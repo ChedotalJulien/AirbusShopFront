@@ -1,3 +1,4 @@
+/* importing components */
 import { Component, OnInit } from '@angular/core';
 import {CatalogueService} from '../services/catalogue.service';
 import {Router} from '@angular/router';
@@ -9,8 +10,11 @@ selector: 'app-login',
 templateUrl: './login.component.html',
 styleUrls: ['./login.component.css']
 })
+
+/* importing Class */
 export class LoginComponent implements OnInit {
 
+/* Constructor */
 constructor(private authService:AuthenticationService,
               private router:Router,
               private caddyService:CaddyService) { }
@@ -28,3 +32,4 @@ constructor(private authService:AuthenticationService,
   }
 
 }
+// END //
