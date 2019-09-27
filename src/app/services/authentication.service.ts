@@ -11,10 +11,9 @@
     public authenticated: boolean;
     public authenticatedUser;
     private users=[
-    {username:"admin", password:"azerty",roles:['USER','ADMIN']},
-    {username:"julien", password:"chedotal",roles:['USER']},
-    {username:"franck", password:"mbajoumbe",roles:['USER']},
-    {username:"timothe", password:"laude",roles:['USER']}
+    {username:"admin", password:"1234",roles:['USER','ADMIN']},
+    {username:"user1", password:"1234",roles:['USER']},
+    {username:"user2", password:"1234",roles:['USER']},
     ]
 
     constructor(private http:HttpClient) {

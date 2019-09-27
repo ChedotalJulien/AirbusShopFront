@@ -41,7 +41,7 @@ constructor(
         else if (p1==2){
           let idCat=this.route.snapshot.params.p2;
           this.title="Produits de la catégorie "+idCat;
-          this.currentRequest='/categories/'+idCat+'/products';
+          this.currentRequest='/categories/'+idCat+'/product';
           this.getProducts(this.currentRequest);
         }
         else if (p1==3){

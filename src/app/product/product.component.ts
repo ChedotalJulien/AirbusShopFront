@@ -81,7 +81,7 @@ constructor(private router:Router, private route:ActivatedRoute,
   }
 
   onProductDetails(p) {
-    this.router.navigateByUrl("/product/"+p.id);
+    this.router.navigateByUrl("/products/"+p.id);
   }
 
   onEditProduct() {
