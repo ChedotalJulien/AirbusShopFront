@@ -1,0 +1,41 @@
+[33mcommit 9cac2bd49f1a752fe7e4c8e19774ec9b8abde383[m[33m ([m[1;36mHEAD -> [m[1;32mfinalVersion[m[33m, [m[1;31morigin/finalVersion[m[33m)[m
+Author: timothe laude <timothelaude@MacBook-Pro-de-timothe.local>
+Date:   Fri Sep 27 11:39:03 2019 +0200
+
+    add product price
+
+[33mcommit 3709866adc67db7268e3cd8dc03c7f82e0cc2cf4[m
+Author: timothe laude <timothelaude@MacBook-Pro-de-timothe.local>
+Date:   Fri Sep 27 07:23:15 2019 +0200
+
+    final with back
+
+[33mcommit a34e6719cb1cbd06a41abbbbb54009c75bddd7d3[m
+Author: chedotaljulien <chedotal.julien@gmail.com>
+Date:   Wed Sep 25 11:19:58 2019 +0200
+
+    service and auth
+
+[33mcommit 768175899e60b348d28e10faeee1abf50f659e84[m
+Author: timothe laude <timothelaude@MacBook-Pro-de-timothe.local>
+Date:   Wed Sep 25 16:44:46 2019 +0200
+
+    product by categories
+
+[33mcommit eac37148e8fc750eb1d95aa453572fd71041fae1[m
+Author: timothe laude <timothelaude@MacBook-Pro-de-timothe.local>
+Date:   Wed Sep 25 12:08:27 2019 +0200
+
+    liste of products
+
+[33mcommit 26fad6c2525b7109f6642b9a702835c2a3a752eb[m
+Author: chedotaljulien <chedotal.julien@gmail.com>
+Date:   Tue Sep 24 13:26:42 2019 +0200
+
+    first commit application AirbusShopFront
+
+[33mcommit c91e2dbf7dd3458977f0636b3ee3cdf9b19e5752[m
+Author: chedotaljulien <chedotal.julien@gmail.com>
+Date:   Tue Sep 24 11:51:27 2019 +0200
+
+    initial commit
